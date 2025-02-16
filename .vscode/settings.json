@@ -51,5 +51,5 @@
         "temp/": true,
         "Temp/": true
     },
-    "dotnet.defaultSolution": "RollerBall.sln"
+    "dotnet.defaultSolution": "2025CT_RollerBall_Jeffrey.N.sln"
 }
