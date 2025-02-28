@@ -2,17 +2,25 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.InputSystem;
+using TMPro;
 
 public class PlayerMovement : MonoBehaviour
 {
     private Rigidbody rb;
+    private int count;
     private float movementX;
     private float movementY;
     public float speed = 0;
+    public TextMeshProUGUI countText;
+    public GameObject winTextObject;
+    
 
     void Start()
     {
         rb = GetComponent<Rigidbody>();
+        count = 0;
+        SetCountText();
+        winTextObject.SetActive(false);
     }
 
     void OnMove(InputValue movementValue)
@@ -23,6 +31,15 @@ public class PlayerMovement : MonoBehaviour
         movementY = movementVector.y;
     }
 
+    void SetCountText()
+    {
+        countText.text = "Count: " + count.ToString();
+        if (count >= 8)
+        {
+            winTextObject.SetActive(true);
+        }
+    }
+
     private void FixedUpdate()
     {
         Vector3 movement = new Vector3 (movementX, 0.0f, movementY);
@@ -31,10 +48,12 @@ public class PlayerMovement : MonoBehaviour
 
     void OnTriggerEnter (Collider other)
     {
+        count = count + 1;
         other.gameObject.SetActive(false);
 
         if(other.gameObject.CompareTag("Pickup"));
         {
+            SetCountText();
             other.gameObject.SetActive(false);
         }
     }
