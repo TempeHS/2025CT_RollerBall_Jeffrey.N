@@ -7,6 +7,7 @@ public class EnemyMovement : MonoBehaviour
 {
     public Transform player;
     private NavMeshAgent navMeshAgent;
+    public Animator animator;
 
 
 
@@ -14,6 +15,7 @@ public class EnemyMovement : MonoBehaviour
     void Start()
     {
         navMeshAgent = GetComponent<NavMeshAgent>();
+        animator = GetComponent<Animator>();
     }
 
     // Update is called once per frame
