@@ -3,16 +3,22 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.InputSystem;
 using TMPro;
+using Cinemachine;
 
 public class PlayerMovement : MonoBehaviour
 {
     private Rigidbody rb;
     private int count;
+
     private float movementX;
     private float movementY;
+
     public float speed = 0;
+    /*public float RotationSpeed = 500f;*/
+
     public TextMeshProUGUI countText;
     public GameObject winTextObject;
+    /*CinemachineFreeLook freeLookCamera;*/
     
 
     void Start()
@@ -45,7 +51,18 @@ public class PlayerMovement : MonoBehaviour
     {
         Vector3 movement = new Vector3 (movementX, 0.0f, movementY);
         rb.AddForce(movement * speed);
+
+        /*RotatePlayer;*/
     }
+
+    /*void RotatePlayer()
+    {
+        freeLookCamera = yaw.transform.Rotate.eulerAngles.y;
+
+        targetRotation = Quaternion.Euler(0.0f, Camerayaw, 0.0f);
+
+        transform.Rotate = transform.RotateTowards(transform.rotation, targetRotation, RotationSpeed * Time.deltaTime);
+    }*/
 
     void OnTriggerEnter (Collider other)
     {
