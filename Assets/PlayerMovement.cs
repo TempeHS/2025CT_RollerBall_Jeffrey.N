@@ -3,7 +3,6 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.InputSystem;
 using TMPro;
-using Cinemachine;
 
 public class PlayerMovement : MonoBehaviour
 {
@@ -19,7 +18,6 @@ public class PlayerMovement : MonoBehaviour
     public TextMeshProUGUI countText;
     public GameObject winTextObject;
     /*CinemachineFreeLook freeLookCamera;*/
-    
 
     void Start()
     {
