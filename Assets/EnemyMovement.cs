@@ -5,6 +5,8 @@ using UnityEngine.AI;
 
 public class EnemyMovement : MonoBehaviour
 {
+    public PlayerDashing dashforce;
+
     public Transform player;
     private NavMeshAgent navMeshAgent;
 
@@ -23,4 +25,14 @@ public class EnemyMovement : MonoBehaviour
         }
         
     }
+
+    void OnCollisionEnter(Collision collision)
+    {
+        if (dashforce != null)
+        {
+            Destroy(gameObject);
+        }
+
+    }
+
 }

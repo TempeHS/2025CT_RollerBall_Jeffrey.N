@@ -17,6 +17,8 @@ public class BetterPlayerMovement : MonoBehaviour
     public TextMeshProUGUI countText;
     public GameObject winTextObject;
 
+    public PlayerDashing dashforce;
+
     Vector3 moveDirection;
 
     Rigidbody rb;
@@ -81,6 +83,11 @@ public class BetterPlayerMovement : MonoBehaviour
             winTextObject.SetActive(true);
             winTextObject.GetComponent<TextMeshProUGUI>().text = "YOU LOSE";
         }
+
+        /*if (dashforce, collsion.gameObject.CompareTag("Enemy"))
+        {
+            Destroy(GameObject.FindGameObjectWithTag("Enemy"));
+        }*/
     }
 
 }
