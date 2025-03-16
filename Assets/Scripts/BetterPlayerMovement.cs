@@ -26,7 +26,7 @@ public class BetterPlayerMovement : MonoBehaviour
         rb = GetComponent<Rigidbody>();
         rb.freezeRotation = true;
 
-        countText = 0;
+        count = 0;
         SetCountText();
         winTextObject.SetActive(false);
     }
@@ -55,8 +55,8 @@ public class BetterPlayerMovement : MonoBehaviour
 
     void SetCountText()
     {
-        countText.text = "Count: " + count.ToString();
-        if (count >= 1)
+        countText.text = "Count : " + count.ToString();
+        if (count >= 80)
         {
             winTextObject.SetActive(true);
             Destroy(GameObject.FindGameObjectWithTag("Enemy"));
@@ -64,7 +64,7 @@ public class BetterPlayerMovement : MonoBehaviour
     }
     private void OnTriggerEnter(Collider other)
     {
-        count = count++;
+        count = count + 1;
         other.gameObject.SetActive(false);
 
         if (other.gameObject.CompareTag("Pickup"))
