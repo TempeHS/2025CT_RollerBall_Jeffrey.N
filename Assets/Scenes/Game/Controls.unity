@@ -442,8 +442,8 @@ RectTransform:
   - {fileID: 579728736}
   - {fileID: 915011299}
   - {fileID: 330691857}
-  - {fileID: 170487674}
   - {fileID: 1210495541}
+  - {fileID: 170487674}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
@@ -1533,7 +1533,7 @@ GameObject:
   - component: {fileID: 2143514907}
   - component: {fileID: 2143514906}
   m_Layer: 5
-  m_Name: Move
+  m_Name: Enemies
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
