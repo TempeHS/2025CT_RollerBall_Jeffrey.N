@@ -17,7 +17,7 @@ public class StartMenu : MonoBehaviour
 
     public void OnLearnClick()
     {
-        SceneManager.LoadScene("HowToPlay");
+        SceneManager.LoadScene("HowToPlay", LoadSceneMode.Single);
     }
     
     public void OnExitClick()
