@@ -15,6 +15,11 @@ public class StartMenu : MonoBehaviour
         SceneManager.LoadScene("Controls", LoadSceneMode.Single);
     }
 
+    public void OnLearnClick()
+    {
+        SceneManager.LoadScene("HowToPlay");
+    }
+    
     public void OnExitClick()
     {
         SceneManager.LoadScene("StartMenu", LoadSceneMode.Single);
