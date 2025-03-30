@@ -364,6 +364,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c60dc0d6db06b474bb9ebd1c3eb7f523, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  howtoplayOpenButton: {fileID: 0}
+  startgameOpenButton: {fileID: 0}
+  controlsOpenButton: {fileID: 0}
+  closeButton: {fileID: 915011298}
 --- !u!114 &204420633
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -919,9 +923,9 @@ MonoBehaviour:
   m_Transition: 1
   m_Colors:
     m_NormalColor: {r: 1, g: 1, b: 1, a: 1}
-    m_HighlightedColor: {r: 0.9607843, g: 0.9607843, b: 0.9607843, a: 1}
-    m_PressedColor: {r: 0.78431374, g: 0.78431374, b: 0.78431374, a: 1}
-    m_SelectedColor: {r: 0.9607843, g: 0.9607843, b: 0.9607843, a: 1}
+    m_HighlightedColor: {r: 1, g: 1, b: 1, a: 1}
+    m_PressedColor: {r: 0.4392157, g: 1, b: 0.5372549, a: 1}
+    m_SelectedColor: {r: 0.4392157, g: 1, b: 0.5372549, a: 1}
     m_DisabledColor: {r: 0.78431374, g: 0.78431374, b: 0.78431374, a: 0.5019608}
     m_ColorMultiplier: 1
     m_FadeDuration: 0.1
@@ -966,7 +970,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 0, g: 0, b: 0, a: 1}
+  m_Color: {r: 0.44313726, g: 0.44313726, b: 0.44313726, a: 1}
   m_RaycastTarget: 1
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
   m_Maskable: 1
